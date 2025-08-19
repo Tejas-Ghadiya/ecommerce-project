@@ -4,7 +4,7 @@ import { InputType, Field } from "@nestjs/graphql";
 export class CreateUserInput{
    
     @Field()
-    user_type: string
+    role: string
     
     @Field()
     name: string

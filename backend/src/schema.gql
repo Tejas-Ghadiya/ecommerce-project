@@ -4,7 +4,7 @@
 
 type User {
   id: Int!
-  user_type: String!
+  role: String!
   name: String!
   email: String!
   password: String!
@@ -20,7 +20,7 @@ type Mutation {
 }
 
 input CreateUserInput {
-  user_type: String!
+  role: String!
   name: String!
   email: String!
   password: String!
