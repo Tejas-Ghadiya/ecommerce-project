@@ -1,0 +1,19 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  name: String!
+  email: String
+}
+
+type Admin {
+  name: String!
+  email: String
+}
+
+type Query {
+  index: String!
+  get_user: [User!]!
+  admin_list: [Admin!]!
+}
