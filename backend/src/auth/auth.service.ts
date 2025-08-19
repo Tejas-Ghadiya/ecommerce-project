@@ -16,7 +16,7 @@ export class AuthService {
     private jwtService: JwtService,
   ) {}
 
-async register(input: CreateUserInput): Promise<RegisterResponse> {
+async register(input: CreateUserInput): Promise<RegisterResponse> { 
   const existingUser = await this.userRepo.findOne({
     where: { email: input.email },
   });

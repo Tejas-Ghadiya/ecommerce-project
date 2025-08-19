@@ -20,6 +20,12 @@ type RegisterResponse {
   token: String!
 }
 
+type Role {
+  id: Int!
+  name: String!
+  authentication: [String!]
+}
+
 type Query {
   users: [User!]!
 }
@@ -27,6 +33,7 @@ type Query {
 type Mutation {
   register(input: CreateUserInput!): RegisterResponse!
   login(input: LoginInput!): LoginResponse!
+  createRole(input: CreateRoleInput!): Role!
 }
 
 input CreateUserInput {
@@ -39,4 +46,9 @@ input CreateUserInput {
 input LoginInput {
   email: String!
   password: String!
+}
+
+input CreateRoleInput {
+  name: String!
+  authentication: [String!]
 }

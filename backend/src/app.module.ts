@@ -7,6 +7,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
 import { User } from './auth/user.entity';
 import { GraphQLError } from 'graphql';
+import { RoleModule } from './role/role.module';
 
 @Module({
   imports: [
@@ -37,6 +38,7 @@ import { GraphQLError } from 'graphql';
     }),
 
     AuthModule,
+    RoleModule,
   ],
 })
 export class AppModule {}
